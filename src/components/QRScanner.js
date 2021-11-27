@@ -1,5 +1,6 @@
 import {useState} from "react";
 import QrReader from 'react-qr-reader';
+import Box from "@mui/material/Box";
 
 /**
  * Will open camera to read scan qr code
@@ -19,15 +20,15 @@ export const QRScanner = () => {
         console.error(err);
     }
     return (
-        <div className="Scanner">
+        <Box className="Scanner" sx={{display: 'flex', flexDirection: 'column'}}>
             <QrReader
                 delay={300}
                 onError={handleError}
                 onScan={handleScan}
-                style={{width: '100%'}}
+                style={{maxWidth: '600px', width: '100%', marginLeft: 'auto', marginRight: 'auto'}}
             />
-            <p>{result}</p>
-        </div>
+            {result}
+        </Box>
     );
 }
 
