@@ -1,5 +1,3 @@
-'use strict';
-
 import {base32} from "rfc4648";
 const cbor = require('cbor-web')
 const expectedVersions = new Set(['1']); // currently all versions must be 1
