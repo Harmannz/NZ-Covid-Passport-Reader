@@ -11,9 +11,9 @@ import {covidCodeVerifier} from "../covid-pass-verifier/verifier";
 export const QRScanner = () => {
     const [result, setResult] = useState('No Result');
 
-    const handleScan = async (data) => {
+    const handleScan = (data) => {
         if (data) {
-            const response = await covidCodeVerifier(data)
+            const response = covidCodeVerifier(data)
             setResult("" + response);
             console.log(data);
         }
