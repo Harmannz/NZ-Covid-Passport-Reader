@@ -1,6 +1,7 @@
 import {useState} from "react";
 import QrReader from 'react-qr-reader';
 import Box from "@mui/material/Box";
+import {covidCodeVerifier} from "../covid-pass-verifier/verifier";
 
 /**
  * Will open camera to read scan qr code
@@ -10,9 +11,10 @@ import Box from "@mui/material/Box";
 export const QRScanner = () => {
     const [result, setResult] = useState('No Result');
 
-    const handleScan = (data) => {
+    const handleScan = async (data) => {
         if (data) {
-            setResult(data)
+            const response = await covidCodeVerifier(data)
+            setResult("" + response);
             console.log(data);
         }
     }
