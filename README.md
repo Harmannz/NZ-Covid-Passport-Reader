@@ -1,4 +1,7 @@
-# Getting Started with Create React App
+# New Zealand Covid Passport Verifier
+
+This is repo is an attempt to better understand the New Zealand covid pass specification and attempt to verify the QR code myself.
+See [diy branch](https://github.com/Harmannz/NZ-Covid-Passport-Reader/tree/diy) for my own attempt at decoding/verifying the qr code.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
